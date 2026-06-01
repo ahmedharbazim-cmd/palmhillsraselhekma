@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>هاسيندا راس الحكمة | Palm Hills Developments</title>
+<meta name="description" content="هاسيندا راس الحكمة — مدينة بالم هيلز الساحلية المتكاملة على المتوسط. ١٬٤٠٠ فدان، شاطئ ٤.٨ كم، مقدم ٥٪ وتقسيط حتى ١٠ سنوات.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue-deep: #1a3d6b;
+    --blue-mid: #2563a8;
+    --blue-light: #5b9bd5;
+    --blue-pale: #a8c8e8;
+    --blue-sky: #d6eaf8;
+    --blue-ultra: #eaf4fc;
+    --gold: #c9a84c;
+    --gold-light: #e8d5a3;
+    --white: #ffffff;
+    --off-white: #f8fbfe;
+    --text-dark: #0d1f35;
+    --text-mid: #2c4a6e;
+    --text-light: #6b8fb5;
+    --border: rgba(91,155,213,0.2);
+    --shadow: 0 8px 40px rgba(26,61,107,0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Tajawal', sans-serif;
+    background: var(--white);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  body.en {
+    font-family: 'Inter', sans-serif;
+    direction: ltr;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 0 5vw;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  nav.scrolled {
+    height: 60px;
+    box-shadow: var(--shadow);
+  }
+  .nav-logo img {
+    height: 42px;
+    object-fit: contain;
+  }
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none; color: var(--text-mid);
+    font-size: 0.95rem; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--blue-mid); }
+
+  .nav-right {
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .lang-btn {
+    background: var(--blue-ultra); border: 1px solid var(--blue-pale);
+    color: var(--blue-mid); padding: 6px 14px; border-radius: 20px;
+    font-size: 0.85rem; font-weight: 600; cursor: pointer;
+    transition: all 0.2s; font-family: inherit;
+  }
+  .lang-btn:hover { background: var(--blue-mid); color: white; }
+
+  .nav-cta {
+    background: var(--blue-mid); color: white;
+    padding: 9px 22px; border-radius: 6px;
+    text-decoration: none; font-size: 0.9rem; font-weight: 600;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  .nav-cta:hover { background: var(--blue-deep); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    position: relative; overflow: hidden;
+    display: flex; align-items: center;
+    background: linear-gradient(160deg, var(--blue-deep) 0%, #1e5080 40%, #2a7ab8 100%);
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 60% 40%, rgba(91,155,213,0.18) 0%, transparent 70%),
+      url('https://palmhills.me/wp-content/uploads/2026/05/haicinda-ras-el-hekma.jpeg') center/cover no-repeat;
+    opacity: 0.35;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to left, rgba(26,61,107,0.5) 0%, rgba(26,61,107,0.85) 60%, rgba(26,61,107,0.95) 100%);
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 120px 5vw 80px;
+    max-width: 700px;
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+    padding: 6px 16px; border-radius: 30px;
+    color: var(--blue-pale); font-size: 0.8rem; letter-spacing: 2px;
+    text-transform: uppercase; margin-bottom: 1.5rem;
+  }
+  .hero-tag span { color: var(--gold); }
+  .hero-en-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--gold-light); font-size: 1.1rem;
+    font-style: italic; letter-spacing: 3px;
+    text-transform: uppercase; margin-bottom: 0.8rem;
+  }
+  .hero-title {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 800; color: white;
+    line-height: 1.1; margin-bottom: 0.5rem;
+  }
+  .hero-title-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    color: var(--blue-pale); font-weight: 300;
+    font-style: italic; margin-bottom: 1.8rem;
+    letter-spacing: 1px;
+  }
+  .hero-desc {
+    color: rgba(255,255,255,0.8); font-size: 1.1rem;
+    line-height: 1.8; margin-bottom: 2.5rem;
+    max-width: 560px;
+  }
+  .hero-stats {
+    display: flex; gap: 2rem; flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+  .hero-stat {
+    text-align: center;
+  }
+  .hero-stat .num {
+    display: block; font-size: 1.6rem; font-weight: 800; color: white;
+    line-height: 1;
+  }
+  .hero-stat .lbl {
+    font-size: 0.75rem; color: var(--blue-pale);
+    letter-spacing: 1px; text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .hero-btns {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--gold); color: var(--text-dark);
+    padding: 14px 32px; border-radius: 8px;
+    font-size: 1rem; font-weight: 700;
+    text-decoration: none; transition: all 0.2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover { background: #b8932e; transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent; color: white;
+    padding: 13px 28px; border-radius: 8px;
+    font-size: 1rem; font-weight: 600;
+    text-decoration: none; border: 2px solid rgba(255,255,255,0.4);
+    transition: all 0.2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+  .hero-scroll {
+    position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+    color: rgba(255,255,255,0.5); font-size: 0.75rem; letter-spacing: 2px;
+    text-transform: uppercase; text-align: center; z-index: 2;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+  }
+  .scroll-line {
+    width: 1px; height: 40px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse { 0%,100%{opacity:0.3} 50%{opacity:1} }
+
+  /* ── TICKER ── */
+  .ticker {
+    background: var(--blue-deep);
+    padding: 14px 0; overflow: hidden;
+    border-top: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold);
+  }
+  .ticker-inner {
+    display: flex; gap: 4rem;
+    animation: tickerMove 20s linear infinite;
+    white-space: nowrap;
+  }
+  .ticker-item {
+    color: var(--gold-light); font-size: 0.9rem; font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .ticker-dot {
+    color: var(--gold); margin: 0 1rem;
+  }
+  @keyframes tickerMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 100px 5vw; }
+
+  .section-label {
+    font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase;
+    color: var(--blue-light); font-weight: 600; margin-bottom: 0.8rem;
+  }
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
+    color: var(--text-dark); line-height: 1.2; margin-bottom: 1.2rem;
+  }
+  .section-desc {
+    font-size: 1.05rem; color: var(--text-light);
+    line-height: 1.9; max-width: 650px;
+  }
+
+  /* ── ABOUT ── */
+  .about { background: var(--off-white); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5vw; align-items: center;
+  }
+  .about-img-wrap {
+    position: relative; border-radius: 16px; overflow: hidden;
+  }
+  .about-img-wrap img {
+    width: 100%; height: 500px; object-fit: cover; display: block;
+  }
+  .about-badge {
+    position: absolute; bottom: 24px; right: 24px;
+    background: var(--blue-deep); color: white;
+    padding: 16px 24px; border-radius: 12px;
+    text-align: center;
+  }
+  .about-badge .num { font-size: 2rem; font-weight: 800; color: var(--gold); }
+  .about-badge .lbl { font-size: 0.8rem; margin-top: 2px; opacity: 0.8; }
+  .about-nums {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5rem; margin-top: 2.5rem;
+  }
+  .about-num-card {
+    background: white; border-radius: 12px;
+    padding: 20px; border: 1px solid var(--border);
+  }
+  .about-num-card .n { font-size: 1.8rem; font-weight: 800; color: var(--blue-mid); }
+  .about-num-card .l { font-size: 0.85rem; color: var(--text-light); margin-top: 4px; }
+
+  /* ── HIGHLIGHTS ── */
+  .highlights { background: white; }
+  .highlights-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; margin-top: 3rem;
+  }
+  .highlight-card {
+    background: var(--blue-ultra); border-radius: 16px;
+    padding: 36px 28px; border: 1px solid var(--border);
+    transition: all 0.3s; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .highlight-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: linear-gradient(to right, var(--blue-mid), var(--blue-light));
+    transform: scaleX(0); transform-origin: right; transition: transform 0.3s;
+  }
+  .highlight-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+  .highlight-card:hover::before { transform: scaleX(1); }
+  .highlight-icon {
+    font-size: 2.5rem; margin-bottom: 1rem;
+  }
+  .highlight-card h3 { font-size: 1rem; font-weight: 700; color: var(--blue-deep); margin-bottom: 0.5rem; }
+  .highlight-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
+
+  /* ── PRICING ── */
+  .pricing { background: var(--off-white); }
+  .pricing-cards {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; margin-top: 3rem;
+  }
+  .price-card {
+    background: white; border-radius: 20px;
+    overflow: hidden; border: 1px solid var(--border);
+    box-shadow: 0 4px 20px rgba(26,61,107,0.07);
+    transition: all 0.3s;
+  }
+  .price-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .price-card.featured {
+    border: 2px solid var(--blue-mid);
+    position: relative;
+  }
+  .price-card .badge-featured {
+    position: absolute; top: 16px; left: 16px;
+    background: var(--gold); color: var(--text-dark);
+    font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px;
+    letter-spacing: 1px;
+  }
+  .price-card-img { width: 100%; height: 200px; object-fit: cover; }
+  .price-card-body { padding: 24px; }
+  .price-card-body h3 { font-size: 1.2rem; font-weight: 800; color: var(--text-dark); margin-bottom: 4px; }
+  .price-location { font-size: 0.8rem; color: var(--blue-light); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1rem; }
+  .price-main { font-size: 1.5rem; font-weight: 800; color: var(--blue-mid); margin-bottom: 1rem; }
+  .price-features { list-style: none; margin-bottom: 1.5rem; }
+  .price-features li {
+    font-size: 0.88rem; color: var(--text-light);
+    padding: 6px 0; border-bottom: 1px solid var(--blue-ultra);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .price-features li::before { content: '✓'; color: var(--blue-mid); font-weight: 700; }
+  .btn-book {
+    display: block; width: 100%; text-align: center;
+    background: var(--blue-mid); color: white;
+    padding: 13px; border-radius: 8px;
+    text-decoration: none; font-weight: 700; font-size: 0.95rem;
+    transition: background 0.2s;
+  }
+  .btn-book:hover { background: var(--blue-deep); }
+
+  /* ── FEATURES / WHY ── */
+  .why { background: var(--blue-deep); }
+  .why .section-label { color: var(--blue-pale); }
+  .why .section-title { color: white; }
+  .why .section-desc { color: rgba(255,255,255,0.65); }
+  .why-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .why-card {
+    background: rgba(255,255,255,0.07); border-radius: 14px;
+    padding: 28px 20px; border: 1px solid rgba(255,255,255,0.1);
+    text-align: center; transition: all 0.3s;
+  }
+  .why-card:hover { background: rgba(255,255,255,0.12); transform: translateY(-4px); }
+  .why-card .icon { font-size: 2.2rem; margin-bottom: 0.8rem; }
+  .why-card h4 { color: white; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .why-card p { color: rgba(255,255,255,0.55); font-size: 0.82rem; line-height: 1.6; }
+
+  /* ── STATS ── */
+  .stats-bar {
+    background: var(--gold); padding: 40px 5vw;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 2rem; text-align: center;
+  }
+  .stats-bar .s-num { font-size: 2.2rem; font-weight: 800; color: var(--text-dark); }
+  .stats-bar .s-lbl { font-size: 0.85rem; color: rgba(13,31,53,0.7); font-weight: 600; margin-top: 4px; }
+
+  /* ── GALLERY ── */
+  .gallery { background: white; }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 260px 260px;
+    gap: 12px; margin-top: 2.5rem;
+  }
+  .gallery-item {
+    border-radius: 12px; overflow: hidden;
+    position: relative; cursor: pointer;
+    background: var(--blue-sky);
+  }
+  .gallery-item:first-child {
+    grid-column: span 2; grid-row: span 2;
+  }
+  .gallery-item img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.5s;
+  }
+  .gallery-item:hover img { transform: scale(1.05); }
+  .gallery-caption {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(26,61,107,0.85));
+    padding: 30px 16px 16px;
+    color: white; font-size: 0.85rem; font-weight: 600;
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .gallery-item:hover .gallery-caption { opacity: 1; }
+
+  /* ── CITY ── */
+  .city { background: var(--off-white); }
+  .city-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem; margin-top: 2.5rem;
+  }
+  .city-card {
+    background: white; border-radius: 12px; padding: 24px 18px;
+    border: 1px solid var(--border); transition: all 0.25s;
+    text-align: center;
+  }
+  .city-card:hover { border-color: var(--blue-light); transform: translateY(-3px); }
+  .city-num { font-size: 0.75rem; color: var(--blue-light); letter-spacing: 2px; font-weight: 600; margin-bottom: 0.5rem; }
+  .city-card h4 { font-size: 0.9rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.3rem; }
+  .city-card p { font-size: 0.78rem; color: var(--text-light); }
+
+  /* ── LOCATION ── */
+  .location-section { background: var(--blue-deep); }
+  .location-section .section-label { color: var(--blue-pale); }
+  .location-section .section-title { color: white; }
+  .location-section .section-desc { color: rgba(255,255,255,0.65); }
+  .distance-strip {
+    display: flex; align-items: stretch; margin-top: 2.5rem;
+    background: rgba(255,255,255,0.05); border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.1); overflow: hidden;
+  }
+  .dist-item {
+    flex: 1; padding: 20px 16px; text-align: center;
+    border-left: 1px solid rgba(255,255,255,0.1);
+  }
+  .dist-item:last-child { border-left: none; }
+  .dist-km { font-size: 1.8rem; font-weight: 800; color: var(--gold); }
+  .dist-name { font-size: 0.8rem; color: rgba(255,255,255,0.7); margin-top: 4px; }
+  .dist-bar {
+    height: 4px; background: rgba(255,255,255,0.1); margin-top: 10px; border-radius: 2px; overflow: hidden;
+  }
+  .dist-bar-fill { height: 100%; background: var(--gold); border-radius: 2px; }
+  .location-note {
+    margin-top: 2rem; padding: 20px 24px;
+    background: rgba(255,255,255,0.06); border-radius: 12px;
+    border-right: 3px solid var(--gold);
+    color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.7;
+  }
+
+  /* ── DEVELOPER ── */
+  .developer { background: white; }
+  .dev-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5vw; align-items: center;
+  }
+  .dev-logo-area {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 1.5rem; text-align: center;
+  }
+  .dev-logo-area img { height: 60px; object-fit: contain; }
+  .dev-x { font-size: 2rem; color: var(--blue-pale); font-weight: 300; }
+  .dev-stats {
+    display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; margin-top: 2rem;
+  }
+  .dev-stat { background: var(--blue-ultra); border-radius: 10px; padding: 18px; text-align: center; }
+  .dev-stat .n { font-size: 1.5rem; font-weight: 800; color: var(--blue-mid); }
+  .dev-stat .l { font-size: 0.8rem; color: var(--text-light); margin-top: 3px; }
+
+  /* ── CONTACT FORM ── */
+  .contact { background: linear-gradient(135deg, var(--blue-deep) 0%, #1e5080 50%, #1a3d6b 100%); }
+  .contact .section-label { color: var(--blue-pale); }
+  .contact .section-title { color: white; }
+  .contact .section-desc { color: rgba(255,255,255,0.6); }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1.2fr;
+    gap: 5vw; margin-top: 3rem; align-items: start;
+  }
+  .contact-info { color: white; }
+  .contact-info h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; }
+  .contact-info p { color: rgba(255,255,255,0.65); line-height: 1.8; margin-bottom: 2rem; }
+  .contact-item {
+    display: flex; align-items: center; gap: 12px;
+    color: rgba(255,255,255,0.85); font-size: 0.95rem; margin-bottom: 1rem;
+  }
+  .contact-item .ci { font-size: 1.4rem; }
+  .contact-trust {
+    margin-top: 2rem; display: flex; flex-direction: column; gap: 0.8rem;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 10px;
+    color: rgba(255,255,255,0.65); font-size: 0.85rem;
+  }
+  .trust-item::before { content: '✓'; color: var(--gold); font-weight: 700; }
+
+  .form-box {
+    background: white; border-radius: 20px;
+    padding: 36px 32px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  }
+  .form-box h3 {
+    font-size: 1.3rem; font-weight: 700; color: var(--text-dark);
+    margin-bottom: 0.5rem; text-align: center;
+  }
+  .form-box p {
+    font-size: 0.88rem; color: var(--text-light);
+    text-align: center; margin-bottom: 1.5rem;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .form-group { margin-bottom: 1rem; }
+  .form-group label {
+    display: block; font-size: 0.85rem; font-weight: 600;
+    color: var(--text-mid); margin-bottom: 6px;
+  }
+  .form-group input,
+  .form-group select {
+    width: 100%; padding: 12px 14px; border-radius: 8px;
+    border: 1.5px solid var(--border); font-family: inherit; font-size: 0.95rem;
+    color: var(--text-dark); background: var(--off-white);
+    transition: border-color 0.2s; outline: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus { border-color: var(--blue-mid); background: white; }
+  .form-submit {
+    width: 100%; background: var(--blue-mid); color: white;
+    border: none; padding: 15px; border-radius: 10px;
+    font-size: 1rem; font-weight: 700; cursor: pointer;
+    transition: background 0.2s; font-family: inherit; margin-top: 0.5rem;
+  }
+  .form-submit:hover { background: var(--blue-deep); }
+  .form-success {
+    display: none; text-align: center; padding: 20px;
+    color: var(--blue-mid); font-weight: 600; font-size: 1rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--text-dark); color: rgba(255,255,255,0.7);
+    padding: 60px 5vw 30px;
+  }
+  .footer-top {
+    display: grid; grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem; margin-bottom: 3rem;
+  }
+  .footer-brand img { height: 40px; object-fit: contain; margin-bottom: 1rem; filter: brightness(0) invert(1); opacity: 0.85; }
+  .footer-brand p { font-size: 0.88rem; line-height: 1.8; color: rgba(255,255,255,0.5); }
+  .footer-col h4 { color: white; font-size: 0.95rem; font-weight: 700; margin-bottom: 1rem; }
+  .footer-col a {
+    display: block; color: rgba(255,255,255,0.5); text-decoration: none;
+    font-size: 0.88rem; margin-bottom: 0.5rem; transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.8rem; color: rgba(255,255,255,0.35);
+  }
+  .footer-bottom a { color: var(--gold); text-decoration: none; }
+
+  /* ── FLOATING BUTTONS ── */
+  .float-btns {
+    position: fixed; bottom: 30px; right: 30px; z-index: 999;
+    display: flex; flex-direction: column; gap: 12px; align-items: flex-end;
+  }
+  .float-btn {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 20px; border-radius: 50px;
+    font-size: 0.9rem; font-weight: 700; text-decoration: none;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.2); transition: all 0.25s;
+    font-family: inherit;
+  }
+  .float-wa { background: #25d366; color: white; }
+  .float-call { background: var(--blue-mid); color: white; }
+  .float-btn:hover { transform: translateX(-4px); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
+
+  /* ── MOBILE ── */
+  @media (max-width: 900px) {
+    nav { padding: 0 4vw; }
+    .nav-links { display: none; }
+    .about-grid, .dev-grid, .contact-grid { grid-template-columns: 1fr; }
+    .highlights-grid, .pricing-cards { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: repeat(2,1fr); }
+    .city-grid { grid-template-columns: repeat(2,1fr); }
+    .stats-bar { grid-template-columns: repeat(2,1fr); }
+    .gallery-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+    .gallery-item:first-child { grid-column: span 2; grid-row: span 1; }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+    .form-row { grid-template-columns: 1fr; }
+    .distance-strip { flex-wrap: wrap; }
+    .dist-item { flex: 0 0 50%; border-left: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    section { padding: 70px 5vw; }
+    .hero-content { padding: 100px 5vw 60px; }
+    .float-btns { bottom: 20px; right: 15px; }
+    .float-btn { padding: 10px 16px; font-size: 0.82rem; }
+  }
+
+  /* ── ENGLISH ADJUSTMENTS ── */
+  body.en .hero-content { direction: ltr; }
+  body.en .section-desc { direction: ltr; }
+  body.en .price-features li::before { content: '✓'; }
+  body.en .about-nums { direction: ltr; }
+  body.en footer { direction: ltr; }
+
+  /* Animations */
+  .fade-up {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* MODAL */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.7); z-index: 2000;
+    align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-box {
+    background: white; border-radius: 20px;
+    padding: 40px 36px; max-width: 500px; width: 100%;
+    position: relative; max-height: 90vh; overflow-y: auto;
+  }
+  .modal-close {
+    position: absolute; top: 16px; left: 16px;
+    background: none; border: none; font-size: 1.5rem;
+    cursor: pointer; color: var(--text-light);
+  }
+  .modal-box h2 { font-size: 1.4rem; font-weight: 800; color: var(--text-dark); margin-bottom: 0.4rem; text-align: center; }
+  .modal-box .sub { font-size: 0.88rem; color: var(--text-light); text-align: center; margin-bottom: 1.5rem; }
+
+  .video-section { background: var(--blue-deep); }
+  .video-section .section-label { color: var(--blue-pale); }
+  .video-section .section-title { color: white; }
+  .video-wrap {
+    margin-top: 2.5rem; border-radius: 16px; overflow: hidden;
+    background: black; aspect-ratio: 16/9;
+    max-width: 900px; margin-left: auto; margin-right: auto;
+    position: relative;
+  }
+  .video-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
+  .video-thumb {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(26,61,107,0.9), rgba(30,80,128,0.7)),
+      url('https://palmhills.me/wp-content/uploads/2026/05/haicinda-ras-el-hekma.jpeg') center/cover;
+    display: flex; align-items: center; justify-content: center; cursor: pointer;
+    transition: opacity 0.4s;
+  }
+  .play-btn {
+    width: 80px; height: 80px; background: white; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem; color: var(--blue-mid);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+  }
+  .play-btn:hover { transform: scale(1.1); }
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-logo">
+    <a href="#">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/logoAr-1024x263.png" alt="Palm Hills Logo" id="navLogo">
+    </a>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about" data-ar="عن المشروع" data-en="About">عن المشروع</a></li>
+    <li><a href="#pricing" data-ar="الأسعار" data-en="Pricing">الأسعار</a></li>
+    <li><a href="#gallery" data-ar="معرض الصور" data-en="Gallery">معرض الصور</a></li>
+    <li><a href="#why" data-ar="لماذا بالم هيلز" data-en="Why Palm Hills">لماذا بالم هيلز</a></li>
+    <li><a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-btn" onclick="toggleLang()" id="langBtn">EN</button>
+    <a href="tel:01068439196" class="nav-cta" data-ar="اتصل الآن" data-en="Call Now">اتصل الآن</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span>🔴 LAUNCHING NOW</span>
+      <span>· راس الحكمة · KM 238</span>
+    </div>
+    <div class="hero-en-subtitle">A Coast Apart</div>
+    <h1 class="hero-title" data-ar="هاسيندا راس الحكمة" data-en="Hacienda Ras El Hekma">هاسيندا راس الحكمة</h1>
+    <div class="hero-title-en" data-ar="The Mediterranean's Most Extraordinary Shoreline" data-en="The Mediterranean's Most Extraordinary Shoreline">The Mediterranean's Most Extraordinary Shoreline</div>
+    <p class="hero-desc" data-ar="أول مدينة ساحلية مسوّرة من بالم هيلز على كيلو ٢٣٨ من راس الحكمة — على مساحة ١٬٤٠٠ فدان، بشاطئ يمتد ٤.٨ كم على البحر المتوسط، و٨٦٪ من المساحة حدائق ومياه." data-en="Palm Hills' first gated coastal city at kilometer 238 of Ras El Hekma — spanning 1,400 feddans with a 4.8 km Mediterranean shoreline and 86% green & water spaces.">أول مدينة ساحلية مسوّرة من بالم هيلز على كيلو ٢٣٨ من راس الحكمة — على مساحة ١٬٤٠٠ فدان، بشاطئ يمتد ٤.٨ كم على البحر المتوسط، و٨٦٪ من المساحة حدائق ومياه.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="num">١٬٤٠٠</span><span class="lbl" data-ar="فدان" data-en="Feddans">فدان</span></div>
+      <div class="hero-stat"><span class="num">٤.٨ KM</span><span class="lbl" data-ar="شاطئ متوسطي" data-en="Shoreline">شاطئ متوسطي</span></div>
+      <div class="hero-stat"><span class="num">٨٦٪</span><span class="lbl" data-ar="حدائق ومياه" data-en="Green & Water">حدائق ومياه</span></div>
+      <div class="hero-stat"><span class="num">٥٪</span><span class="lbl" data-ar="مقدم فقط" data-en="Down Payment">مقدم فقط</span></div>
+    </div>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary" data-ar="🏖️ احجز وحدتك الآن" data-en="🏖️ Book Your Unit Now">🏖️ احجز وحدتك الآن</a>
+      <a href="tel:01068439196" class="btn-outline" data-ar="📞 01068439196" data-en="📞 01068439196">📞 01068439196</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span data-ar="اكتشف" data-en="Scroll">اكتشف</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item">🌊 أسعار تبدأ من 12 مليون جنية</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-item">💰 مقدم يبدأ من 5٪</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-item">📅 تقسيط حتى 10 سنوات</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-item">🏠 شاليه · شقق · توين هاوس · فيلا</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-item">✅ تشطيب كامل · مطبخ · تكييف</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-item">🌊 Starting from 12M EGP</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-item">💰 5% Down Payment</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-item">📅 10 Years Installments</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-item">🌊 أسعار تبدأ من 12 مليون جنية</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-item">💰 مقدم يبدأ من 5٪</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-item">📅 تقسيط حتى 10 سنوات</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-item">🏠 شاليه · شقق · توين هاوس · فيلا</span>
+    <span class="ticker-dot">◆</span>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar fade-up">
+  <div><div class="s-num" data-ar="١٬٤٠٠ فدان" data-en="1,400 Feddans">١٬٤٠٠ فدان</div><div class="s-lbl" data-ar="مساحة المشروع" data-en="Project Area">مساحة المشروع</div></div>
+  <div><div class="s-num" data-ar="٤.٨ KM" data-en="4.8 KM">٤.٨ KM</div><div class="s-lbl" data-ar="شاطئ متوسطي" data-en="Mediterranean Shoreline">شاطئ متوسطي</div></div>
+  <div><div class="s-num" data-ar="٣ فنادق" data-en="3 Hotels">٣ فنادق</div><div class="s-lbl" data-ar="علامات فندقية عالمية" data-en="International Brands">علامات فندقية عالمية</div></div>
+  <div><div class="s-num" data-ar="١٠ سنوات" data-en="10 Years">١٠ سنوات</div><div class="s-lbl" data-ar="تقسيط مريح" data-en="Comfortable Installments">تقسيط مريح</div></div>
+</div>
+
+<!-- ABOUT -->
+<section class="about fade-up" id="about">
+  <div class="about-grid">
+    <div>
+      <div class="section-label" data-ar="/ عن المشروع" data-en="/ About the Project">/ عن المشروع</div>
+      <h2 class="section-title" data-ar="هاسيندا راس الحكمة — ساحل بمعايير مختلفة" data-en="Hacienda Ras El Hekma — A Coast Apart">هاسيندا راس الحكمة — ساحل بمعايير مختلفة</h2>
+      <p class="section-desc" data-ar="مشروع بالم هيلز الأول كمدينة ساحلية مسوّرة على كيلو ٢٣٨ من الساحل الشمالي — بالتعاون مع Miran Hills الإماراتية، بمعايير عالمية وبنية تحتية متكاملة تجعل الحياة الساحلية ممكنة طوال السنة." data-en="Palm Hills' first gated coastal city at kilometer 238 of Egypt's North Coast — in collaboration with UAE's Miran Hills, delivering world-class standards and integrated infrastructure for year-round coastal living.">مشروع بالم هيلز الأول كمدينة ساحلية مسوّرة على كيلو ٢٣٨ من الساحل الشمالي — بالتعاون مع Miran Hills الإماراتية، بمعايير عالمية وبنية تحتية متكاملة تجعل الحياة الساحلية ممكنة طوال السنة.</p>
+      <div class="about-nums">
+        <div class="about-num-card"><div class="n">50+</div><div class="l" data-ar="مشروع منفّذ" data-en="Projects Delivered">مشروع منفّذ</div></div>
+        <div class="about-num-card"><div class="n">37.8M</div><div class="l" data-ar="م² مساحات مطورة" data-en="sqm Developed">م² مساحات مطورة</div></div>
+        <div class="about-num-card"><div class="n">1997</div><div class="l" data-ar="سنة التأسيس" data-en="Established">سنة التأسيس</div></div>
+        <div class="about-num-card"><div class="n">8/8</div><div class="l" data-ar="مشاريع بالساحل الشمالي" data-en="North Coast Projects">مشاريع بالساحل الشمالي</div></div>
+      </div>
+    </div>
+    <div class="about-img-wrap">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/haicinda-ras-el-hekma.jpeg" alt="Hacienda Ras El Hekma">
+      <div class="about-badge">
+        <div class="num">٢٥+</div>
+        <div class="lbl" data-ar="سنة خبرة" data-en="Years Experience">سنة خبرة</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="highlights fade-up">
+  <div style="text-align:center; max-width:600px; margin: 0 auto 0.5rem;">
+    <div class="section-label" data-ar="/ مميزات المشروع" data-en="/ Project Features">/ مميزات المشروع</div>
+    <h2 class="section-title" data-ar="كل ما تحتاجه في مكان واحد" data-en="Everything You Need in One Place">كل ما تحتاجه في مكان واحد</h2>
+  </div>
+  <div class="highlights-grid">
+    <div class="highlight-card fade-up">
+      <div class="highlight-icon">🏖️</div>
+      <h3 data-ar="شاطئ ٤.٨ كيلومتر" data-en="4.8 KM Beach">شاطئ ٤.٨ كيلومتر</h3>
+      <p data-ar="أطول شاطئ متوسطي خاص على الساحل الشمالي المصري بالكامل" data-en="The longest private Mediterranean shoreline on Egypt's entire North Coast">أطول شاطئ متوسطي خاص على الساحل الشمالي المصري بالكامل</p>
+    </div>
+    <div class="highlight-card fade-up">
+      <div class="highlight-icon">🌿</div>
+      <h3 data-ar="٨٦٪ خضراء ومائية" data-en="86% Green & Water">٨٦٪ خضراء ومائية</h3>
+      <p data-ar="حدائق ومحاور خضراء متشابكة مع مسطحات مائية على مساحات واسعة" data-en="Intertwined gardens and green corridors with water features across vast areas">حدائق ومحاور خضراء متشابكة مع مسطحات مائية على مساحات واسعة</p>
+    </div>
+    <div class="highlight-card fade-up">
+      <div class="highlight-icon">🏨</div>
+      <h3 data-ar="٣ علامات فندقية عالمية" data-en="3 International Hotels">٣ علامات فندقية عالمية</h3>
+      <p data-ar="تجربة إقامة فندقية رفيعة المستوى داخل المجمع السكني" data-en="Premium hotel experience within the residential compound">تجربة إقامة فندقية رفيعة المستوى داخل المجمع السكني</p>
+    </div>
+    <div class="highlight-card fade-up">
+      <div class="highlight-icon">⛵</div>
+      <h3 data-ar="مارينا دولية" data-en="International Marina">مارينا دولية</h3>
+      <p data-ar="مارينا تستقبل السفن السياحية وتوفر تجربة بحرية فريدة" data-en="Marina welcoming cruise ships offering a unique maritime experience">مارينا تستقبل السفن السياحية وتوفر تجربة بحرية فريدة</p>
+    </div>
+    <div class="highlight-card fade-up">
+      <div class="highlight-icon">🏋️</div>
+      <h3 data-ar="Palm Hills Sporting Club" data-en="Palm Hills Sporting Club">Palm Hills Sporting Club</h3>
+      <p data-ar="نادي رياضي متكامل بأعلى المعايير للرياضة والترفيه والعافية" data-en="Fully integrated sports club with the highest standards of wellness and entertainment">نادي رياضي متكامل بأعلى المعايير للرياضة والترفيه والعافية</p>
+    </div>
+    <div class="highlight-card fade-up">
+      <div class="highlight-icon">🍽️</div>
+      <h3 data-ar="The Core — ريتيل ومطاعم" data-en="The Core — Retail & Dining">The Core — ريتيل ومطاعم</h3>
+      <p data-ar="مركز تجاري ومطاعم ومحلات عالمية في قلب المدينة الساحلية" data-en="Commercial hub with restaurants and international shops in the heart of the coastal city">مركز تجاري ومطاعم ومحلات عالمية في قلب المدينة الساحلية</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing fade-up" id="pricing">
+  <div class="section-label" data-ar="/ الأسعار والمشاريع" data-en="/ Pricing & Projects">/ الأسعار والمشاريع</div>
+  <h2 class="section-title" data-ar="المشاريع المتاحة والأسعار" data-en="Available Projects & Prices">المشاريع المتاحة والأسعار</h2>
+  <p class="section-desc" data-ar="مجموعة متنوعة من الوحدات لتناسب جميع الاحتياجات — تشطيب كامل، مطبخ وتكييف مشمولين." data-en="A diverse range of units to suit all needs — fully finished, kitchen cabinets and ACs included.">مجموعة متنوعة من الوحدات لتناسب جميع الاحتياجات — تشطيب كامل، مطبخ وتكييف مشمولين.</p>
+  <div class="pricing-cards">
+    <div class="price-card featured">
+      <div class="badge-featured" data-ar="🔴 إطلاق الآن" data-en="🔴 Launching Now">🔴 إطلاق الآن</div>
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/haicinda-ras-el-hekma.jpeg" alt="Hacienda Ras El Hekma" class="price-card-img">
+      <div class="price-card-body">
+        <h3>Hacienda Ras El Hekma</h3>
+        <div class="price-location">North Coast · راس الحكمة</div>
+        <div class="price-main" data-ar="يبدأ من 12 مليون ج" data-en="Starting from 12M EGP">يبدأ من 12 مليون ج</div>
+        <ul class="price-features">
+          <li data-ar="شاليه · شقق · توين هاوس · فيلا" data-en="Chalets · Apartments · Twin Houses · Villas">شاليه · شقق · توين هاوس · فيلا</li>
+          <li data-ar="مقدم 5٪ وتقسيط 10 سنوات" data-en="5% Down Payment, 10 Years">مقدم 5٪ وتقسيط 10 سنوات</li>
+          <li data-ar="تشطيب كامل" data-en="Fully Finished">تشطيب كامل</li>
+          <li data-ar="مطبخ وتكييف مشمولين" data-en="Kitchen Cabinets & ACs Included">مطبخ وتكييف مشمولين</li>
+        </ul>
+        <a href="#contact" class="btn-book" data-ar="احجز الآن" data-en="Book Now">احجز الآن</a>
+      </div>
+    </div>
+    <div class="price-card">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/Hacienda-Waters-3-.webp" alt="Hacienda Waters" class="price-card-img">
+      <div class="price-card-body">
+        <h3>Hacienda Waters</h3>
+        <div class="price-location">North Coast · الساحل الشمالي</div>
+        <div class="price-main" data-ar="يبدأ من 13 مليون ج" data-en="Starting from 13M EGP">يبدأ من 13 مليون ج</div>
+        <ul class="price-features">
+          <li data-ar="كابينز · شاليه · فيلا" data-en="Cabins · Chalets · Villas">كابينز · شاليه · فيلا</li>
+          <li data-ar="مقدم 2.5٪ وتقسيط 12 سنوات" data-en="2.5% Down, 12 Years">مقدم 2.5٪ وتقسيط 12 سنوات</li>
+          <li data-ar="تشطيب كامل" data-en="Fully Finished">تشطيب كامل</li>
+        </ul>
+        <a href="#contact" class="btn-book" data-ar="احجز الآن" data-en="Book Now">احجز الآن</a>
+      </div>
+    </div>
+    <div class="price-card">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/Hacienda-Blue-2-1.webp" alt="Hacienda Blue" class="price-card-img">
+      <div class="price-card-body">
+        <h3>Hacienda Blue</h3>
+        <div class="price-location">North Coast · الساحل الشمالي</div>
+        <div class="price-main" data-ar="يبدأ من 19.7 مليون ج" data-en="Starting from 19.7M EGP">يبدأ من 19.7 مليون ج</div>
+        <ul class="price-features">
+          <li data-ar="كابينز · شاليه · فيلا" data-en="Cabins · Senior/Junior Chalets · Villas">كابينز · شاليه · فيلا</li>
+          <li data-ar="مقدم 2.5٪ وتقسيط 12 سنوات" data-en="2.5% Down, 12 Years">مقدم 2.5٪ وتقسيط 12 سنوات</li>
+          <li data-ar="تشطيب كامل" data-en="Fully Finished">تشطيب كامل</li>
+        </ul>
+        <a href="#contact" class="btn-book" data-ar="احجز الآن" data-en="Book Now">احجز الآن</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery fade-up" id="gallery">
+  <div class="section-label" data-ar="/ معرض الصور" data-en="/ Gallery">/ معرض الصور</div>
+  <h2 class="section-title" data-ar="من رمال الشاطئ لقلب المدينة" data-en="From Sandy Shores to City Heart">من رمال الشاطئ لقلب المدينة</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/haicinda-ras-el-hekma.jpeg" alt="Hacienda Main">
+      <div class="gallery-caption" data-ar="هاسيندا راس الحكمة — الواجهة البحرية" data-en="Hacienda Ras El Hekma — Sea Front">هاسيندا راس الحكمة — الواجهة البحرية</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/Hacienda-Waters-3-.webp" alt="Hacienda Waters">
+      <div class="gallery-caption" data-ar="Hacienda Waters" data-en="Hacienda Waters">Hacienda Waters</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/Hacienda-Blue-2-1.webp" alt="Hacienda Blue">
+      <div class="gallery-caption" data-ar="Hacienda Blue" data-en="Hacienda Blue">Hacienda Blue</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/Palm-Hills-Alex-1-.webp" alt="Palm Hills Alexandria">
+      <div class="gallery-caption" data-ar="Palm Hills Alexandria" data-en="Palm Hills Alexandria">Palm Hills Alexandria</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/capital-1.webp" alt="Village De La Capitale">
+      <div class="gallery-caption" data-ar="Village De La Capitale" data-en="Village De La Capitale">Village De La Capitale</div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="video-section fade-up">
+  <div style="text-align:center; max-width:700px; margin:0 auto 0.5rem;">
+    <div class="section-label" data-ar="/ شاهد المشروع" data-en="/ Watch the Project">/ شاهد المشروع</div>
+    <h2 class="section-title" data-ar="تجربة راس الحكمة" data-en="The Ras El Hekma Experience">تجربة راس الحكمة</h2>
+  </div>
+  <div class="video-wrap">
+    <div class="video-thumb" id="videoThumb" onclick="playVideo()">
+      <div class="play-btn">▶</div>
+    </div>
+    <iframe id="videoFrame" style="display:none" src="" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why fade-up" id="why">
+  <div style="max-width:600px;">
+    <div class="section-label" data-ar="/ لماذا بالم هيلز" data-en="/ Why Palm Hills">/ لماذا بالم هيلز</div>
+    <h2 class="section-title" data-ar="لماذا تختار بالم هيلز؟" data-en="Why Choose Palm Hills?">لماذا تختار بالم هيلز؟</h2>
+    <p class="section-desc" data-ar="٢٥ عاماً من التميز في التطوير العقاري على الساحل الشمالي المصري — اسم تثق به ملايين المصريين." data-en="25 years of excellence in real estate development on Egypt's North Coast — a name trusted by millions.">٢٥ عاماً من التميز في التطوير العقاري على الساحل الشمالي المصري — اسم تثق به ملايين المصريين.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card"><div class="icon">🏗️</div><h4 data-ar="خبرة ٢٥ عاماً" data-en="25 Years Experience">خبرة ٢٥ عاماً</h4><p data-ar="أقدم وأكبر مطوري الساحل الشمالي في مصر" data-en="Egypt's longest-standing North Coast developer">أقدم وأكبر مطوري الساحل الشمالي في مصر</p></div>
+    <div class="why-card"><div class="icon">✅</div><h4 data-ar="تشطيب كامل" data-en="Fully Finished">تشطيب كامل</h4><p data-ar="وحداتك جاهزة للسكن مع مطبخ وتكييف مشمولين" data-en="Move-in ready with kitchen cabinets & ACs included">وحداتك جاهزة للسكن مع مطبخ وتكييف مشمولين</p></div>
+    <div class="why-card"><div class="icon">💎</div><h4 data-ar="جودة إماراتية" data-en="Emirati Standards">جودة إماراتية</h4><p data-ar="تعاون مع Miran Hills الإماراتية لمعايير عالمية" data-en="Partnership with UAE's Miran Hills for world standards">تعاون مع Miran Hills الإماراتية لمعايير عالمية</p></div>
+    <div class="why-card"><div class="icon">🏦</div><h4 data-ar="دفع مرن" data-en="Flexible Payment">دفع مرن</h4><p data-ar="مقدم 5٪ فقط وتقسيط مريح حتى 10 سنوات" data-en="Only 5% down payment with up to 10-year installments">مقدم 5٪ فقط وتقسيط مريح حتى 10 سنوات</p></div>
+    <div class="why-card"><div class="icon">🌍</div><h4 data-ar="موقع استراتيجي" data-en="Strategic Location">موقع استراتيجي</h4><p data-ar="كيلو ٢٣٨ — مستقبل الساحل الشمالي المصري" data-en="Kilometer 238 — the future of Egypt's North Coast">كيلو ٢٣٨ — مستقبل الساحل الشمالي المصري</p></div>
+    <div class="why-card"><div class="icon">🛡️</div><h4 data-ar="سند قانوني" data-en="Legal Title">سند قانوني</h4><p data-ar="ملكية مؤمّنة ووثائق قانونية واضحة لجميع الوحدات" data-en="Secured ownership with clear legal documentation">ملكية مؤمّنة ووثائق قانونية واضحة لجميع الوحدات</p></div>
+    <div class="why-card"><div class="icon">🌱</div><h4 data-ar="بيئة خضراء" data-en="Green Environment">بيئة خضراء</h4><p data-ar="٨٦٪ من المساحة حدائق ومسطحات خضراء ومائية" data-en="86% of area is gardens, green spaces & water features">٨٦٪ من المساحة حدائق ومسطحات خضراء ومائية</p></div>
+    <div class="why-card"><div class="icon">🔑</div><h4 data-ar="مدينة متكاملة" data-en="Integrated City">مدينة متكاملة</h4><p data-ar="كل الخدمات والمرافق في مدينة ساحلية واحدة مسوّرة" data-en="All services and amenities in one gated coastal city">كل الخدمات والمرافق في مدينة ساحلية واحدة مسوّرة</p></div>
+  </div>
+</section>
+
+<!-- CITY INFRASTRUCTURE -->
+<section class="city fade-up">
+  <div class="section-label" data-ar="/ المنظومة العمرانية" data-en="/ City Infrastructure">/ المنظومة العمرانية</div>
+  <h2 class="section-title" data-ar="ما هو أبعد من مجرد ساحل" data-en="Beyond Just a Beach">ما هو أبعد من مجرد ساحل</h2>
+  <p class="section-desc" data-ar="راس الحكمة تتشكل كمحور متوسطي جديد — بنية تحتية على معايير عالمية للحياة الساحلية طوال السنة." data-en="Ras El Hekma is shaping up as a new Mediterranean hub — world-class infrastructure for year-round coastal living.">راس الحكمة تتشكل كمحور متوسطي جديد — بنية تحتية على معايير عالمية للحياة الساحلية طوال السنة.</p>
+  <div class="city-grid">
+    <div class="city-card"><div class="city-num">01</div><h4 data-ar="مطار دولي" data-en="International Airport">مطار دولي</h4><p>Ras El Hekma International Airport</p></div>
+    <div class="city-card"><div class="city-num">02</div><h4 data-ar="مارينا دولية" data-en="International Marina">مارينا دولية</h4><p>Marina & Cruise Terminal</p></div>
+    <div class="city-card"><div class="city-num">03</div><h4 data-ar="منطقة أعمال مركزية" data-en="Business District">منطقة أعمال مركزية</h4><p>Central Business District</p></div>
+    <div class="city-card"><div class="city-num">04</div><h4 data-ar="منطقة خدمات حرة" data-en="Free Services Zone">منطقة خدمات حرة</h4><p>Private Services Free Zone</p></div>
+    <div class="city-card"><div class="city-num">05</div><h4 data-ar="شبكة نقل سريع" data-en="Rapid Transit">شبكة نقل سريع</h4><p>Rapid Transit Network</p></div>
+    <div class="city-card"><div class="city-num">06</div><h4 data-ar="مدينة ذكية" data-en="Smart City">مدينة ذكية</h4><p>Smart City Infrastructure</p></div>
+    <div class="city-card"><div class="city-num">07</div><h4 data-ar="واجهة بحرية" data-en="World Class Sea Front">واجهة بحرية</h4><p>World Class Sea Front</p></div>
+    <div class="city-card"><div class="city-num">08</div><h4 data-ar="أمفيتياتر بحري" data-en="Seafront Amphitheatre">أمفيتياتر بحري</h4><p>Seafront Amphitheatre</p></div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location-section fade-up" id="location">
+  <div class="section-label" data-ar="/ الموقع" data-en="/ Location">/ الموقع</div>
+  <h2 class="section-title" data-ar="على شاطئ راس الحكمة — كيلو ٢٣٨" data-en="On Ras El Hekma Shore — KM 238">على شاطئ راس الحكمة — كيلو ٢٣٨</h2>
+  <p class="section-desc" data-ar="في قلب أهم وجهة متوسطية ناشئة في مصر — اتصال مباشر بطريق الإسكندرية–مطروح الساحلي." data-en="At the heart of Egypt's most important emerging Mediterranean destination — direct access to Alexandria–Matrouh coastal road.">في قلب أهم وجهة متوسطية ناشئة في مصر — اتصال مباشر بطريق الإسكندرية–مطروح الساحلي.</p>
+  <div class="distance-strip">
+    <div class="dist-item">
+      <div class="dist-km">110</div>
+      <div class="dist-name" data-ar="العلمين الجديدة" data-en="New Alamein">العلمين الجديدة</div>
+      <div class="dist-bar"><div class="dist-bar-fill" style="width:45%"></div></div>
+    </div>
+    <div class="dist-item">
+      <div class="dist-km">124</div>
+      <div class="dist-name" data-ar="مطار العلمين" data-en="Alamein Airport">مطار العلمين</div>
+      <div class="dist-bar"><div class="dist-bar-fill" style="width:52%"></div></div>
+    </div>
+    <div class="dist-item">
+      <div class="dist-km">138</div>
+      <div class="dist-name" data-ar="سيدي عبد الرحمن" data-en="Sidi Abd El Rahman">سيدي عبد الرحمن</div>
+      <div class="dist-bar"><div class="dist-bar-fill" style="width:58%"></div></div>
+    </div>
+    <div class="dist-item">
+      <div class="dist-km">165</div>
+      <div class="dist-name" data-ar="Hacienda Blue" data-en="Hacienda Blue">Hacienda Blue</div>
+      <div class="dist-bar"><div class="dist-bar-fill" style="width:70%"></div></div>
+    </div>
+    <div class="dist-item" style="background:rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.3); border-radius:0;">
+      <div class="dist-km" style="color:white">238</div>
+      <div class="dist-name" style="color:var(--gold)" data-ar="✦ هاسيندا راس الحكمة" data-en="✦ Hacienda Ras El Hekma">✦ هاسيندا راس الحكمة</div>
+      <div class="dist-bar"><div class="dist-bar-fill" style="width:100%; background:white"></div></div>
+    </div>
+  </div>
+  <div class="location-note" data-ar="📍 N 31°02' · E 27°51' — راس الحكمة، مرسى مطروح، مصر · قريب من مطار العلمين الدولي — توصيل بطريق الإسكندرية–مطروح الساحلي مباشرةً" data-en="📍 N 31°02' · E 27°51' — Ras El Hekma, Marsa Matrouh, Egypt · Close to New Alamein International Airport — Direct access to Alexandria–Matrouh Coastal Road">📍 N 31°02' · E 27°51' — راس الحكمة، مرسى مطروح، مصر · قريب من مطار العلمين الدولي — توصيل بطريق الإسكندرية–مطروح الساحلي مباشرةً</div>
+</section>
+
+<!-- DEVELOPER -->
+<section class="developer fade-up">
+  <div class="dev-grid">
+    <div>
+      <div class="section-label" data-ar="/ المطور العقاري" data-en="/ Developer">/ المطور العقاري</div>
+      <h2 class="section-title" data-ar="بالم هيلز × Miran Hills" data-en="Palm Hills × Miran Hills">بالم هيلز × Miran Hills</h2>
+      <p class="section-desc" data-ar="شراكة استراتيجية بين بالم هيلز للتطوير العقاري المصري — بخبرة ٢٥ سنة وأكثر من ٥٠ مشروعاً منفّذاً — ومجموعة Miran Hills الإماراتية التي تدخل بُعداً دولياً وإماراتياً على مستوى التصميم والتنفيذ." data-en="A strategic partnership between Palm Hills Developments — Egypt's 25-year real estate leader with 50+ delivered projects — and UAE's Miran Hills Group, bringing international Emirati standards to design and execution.">شراكة استراتيجية بين بالم هيلز للتطوير العقاري المصري — بخبرة ٢٥ سنة وأكثر من ٥٠ مشروعاً منفّذاً — ومجموعة Miran Hills الإماراتية التي تدخل بُعداً دولياً وإماراتياً على مستوى التصميم والتنفيذ.</p>
+      <div class="dev-stats">
+        <div class="dev-stat"><div class="n">50+</div><div class="l" data-ar="مشروع منفّذ" data-en="Delivered Projects">مشروع منفّذ</div></div>
+        <div class="dev-stat"><div class="n">37.8M</div><div class="l" data-ar="م² مطورة" data-en="sqm Developed">م² مطورة</div></div>
+        <div class="dev-stat"><div class="n">1997</div><div class="l" data-ar="تأسست" data-en="Established">تأسست</div></div>
+        <div class="dev-stat"><div class="n">8</div><div class="l" data-ar="مشاريع ساحل شمالي" data-en="North Coast Projects">مشاريع ساحل شمالي</div></div>
+      </div>
+    </div>
+    <div class="dev-logo-area">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/logoAr-1024x263.png" alt="Palm Hills">
+      <div class="dev-x">×</div>
+      <div style="background: var(--blue-ultra); padding: 20px 40px; border-radius: 12px; border: 1px solid var(--border);">
+        <div style="font-size:1.4rem; font-weight:800; color:var(--blue-deep);">Miran Hills</div>
+        <div style="font-size:0.8rem; color:var(--text-light);">UAE · الإمارات العربية المتحدة</div>
+      </div>
+      <p style="font-size:0.85rem; color:var(--text-light); text-align:center; max-width:280px; line-height:1.6;" data-ar="A project defined by Emirati standards — scale, precision, and world-class coastal living" data-en="A project defined by Emirati standards — scale, precision, and world-class coastal living">A project defined by Emirati standards — scale, precision, and world-class coastal living</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact fade-up" id="contact">
+  <div style="text-align:center; max-width:600px; margin:0 auto 0.5rem;">
+    <div class="section-label" data-ar="/ احجز الآن" data-en="/ Book Now">/ احجز الآن</div>
+    <h2 class="section-title" data-ar="سجّل بياناتك واحصل على أفضل العروض" data-en="Register Now & Get the Best Offers">سجّل بياناتك واحصل على أفضل العروض</h2>
+    <p class="section-desc" style="margin:0 auto;" data-ar="فريق المبيعات المعتمد سيتواصل معك خلال ٥ دقائق بأفضل الفرص الاستثمارية." data-en="Our authorized sales team will contact you within 5 minutes with the best investment opportunities.">فريق المبيعات المعتمد سيتواصل معك خلال ٥ دقائق بأفضل الفرص الاستثمارية.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3 data-ar="تواصل معنا الآن" data-en="Contact Us Now">تواصل معنا الآن</h3>
+      <p data-ar="نحن هنا للإجابة على جميع استفساراتك وتقديم أفضل الفرص الاستثمارية في هاسيندا راس الحكمة." data-en="We're here to answer all your inquiries and provide the best investment opportunities in Hacienda Ras El Hekma.">نحن هنا للإجابة على جميع استفساراتك وتقديم أفضل الفرص الاستثمارية في هاسيندا راس الحكمة.</p>
+      <div class="contact-item"><span class="ci">📞</span> <a href="tel:01068439196" style="color:inherit; text-decoration:none;">01068439196</a></div>
+      <div class="contact-item"><span class="ci">💬</span> <a href="https://wa.me/201068439196" target="_blank" style="color:inherit; text-decoration:none;" data-ar="واتساب — 01068439196" data-en="WhatsApp — 01068439196">واتساب — 01068439196</a></div>
+      <div class="contact-item"><span class="ci">📍</span> <span data-ar="راس الحكمة، الساحل الشمالي، مصر" data-en="Ras El Hekma, North Coast, Egypt">راس الحكمة، الساحل الشمالي، مصر</span></div>
+      <div class="contact-item"><span class="ci">⏰</span> <span data-ar="متاح من ٩ صباحاً حتى ١١ مساءً" data-en="Available 9 AM – 11 PM">متاح من ٩ صباحاً حتى ١١ مساءً</span></div>
+      <div class="contact-trust">
+        <div class="trust-item" data-ar="بياناتك سرية ١٠٠٪ — لا بريد عشوائي" data-en="Your data is 100% private — no spam">بياناتك سرية ١٠٠٪ — لا بريد عشوائي</div>
+        <div class="trust-item" data-ar="رد خلال ٥ دقائق" data-en="Response within 5 minutes">رد خلال ٥ دقائق</div>
+        <div class="trust-item" data-ar="استشارة مجانية بدون التزام" data-en="Free consultation, no commitment">استشارة مجانية بدون التزام</div>
+        <div class="trust-item" data-ar="فريق سيلز معتمد من بالم هيلز" data-en="Palm Hills Authorized Sales Team">فريق سيلز معتمد من بالم هيلز</div>
+      </div>
+    </div>
+    <div class="form-box">
+      <h3 data-ar="احجز وحدتك الآن" data-en="Book Your Unit Now">احجز وحدتك الآن</h3>
+      <p data-ar="سجّل بياناتك وسيتواصل معك فريقنا فوراً" data-en="Register your details and our team will contact you immediately">سجّل بياناتك وسيتواصل معك فريقنا فوراً</p>
+      <div id="formSuccess" class="form-success">
+        ✅ <span data-ar="شكراً! سيتواصل معك فريقنا خلال ٥ دقائق" data-en="Thank you! Our team will contact you within 5 minutes">شكراً! سيتواصل معك فريقنا خلال ٥ دقائق</span>
+      </div>
+      <div id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label data-ar="الاسم كامل" data-en="Full Name">الاسم كامل</label>
+            <input type="text" id="name" placeholder="محمد أحمد">
+          </div>
+          <div class="form-group">
+            <label data-ar="رقم الموبايل" data-en="Mobile Number">رقم الموبايل</label>
+            <input type="tel" id="phone" placeholder="01xxxxxxxxx">
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</label>
+          <input type="email" id="email" placeholder="example@email.com">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label data-ar="الوظيفة" data-en="Occupation">الوظيفة</label>
+            <input type="text" id="job">
+          </div>
+          <div class="form-group">
+            <label data-ar="اختر المشروع" data-en="Select Project">اختر المشروع</label>
+            <select id="project">
+              <option value="">-- اختر --</option>
+              <option>Hacienda Ras El Hekma</option>
+              <option>Hacienda Blue</option>
+              <option>Hacienda Waters</option>
+              <option>Palm Hills Alexandria</option>
+              <option>Palm Hills New Cairo</option>
+              <option>97 Hills</option>
+              <option>Badya</option>
+              <option>Jirian</option>
+            </select>
+          </div>
+        </div>
+        <button class="form-submit" onclick="submitForm()" data-ar="احجز وحدتك الآن ←" data-en="Book Your Unit Now →">احجز وحدتك الآن ←</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/logoAr-1024x263.png" alt="Palm Hills">
+      <p data-ar="بالم هيلز للتطوير العقاري — خبرة ٢٥ عاماً في تطوير أرقى المجمعات السكنية على الساحل الشمالي المصري والقاهرة الجديدة." data-en="Palm Hills Developments — 25 years of experience developing Egypt's finest residential compounds on the North Coast and New Cairo.">بالم هيلز للتطوير العقاري — خبرة ٢٥ عاماً في تطوير أرقى المجمعات السكنية على الساحل الشمالي المصري والقاهرة الجديدة.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
+      <a href="#about" data-ar="عن المشروع" data-en="About Project">عن المشروع</a>
+      <a href="#pricing" data-ar="الأسعار" data-en="Pricing">الأسعار</a>
+      <a href="#gallery" data-ar="معرض الصور" data-en="Gallery">معرض الصور</a>
+      <a href="#why" data-ar="لماذا بالم هيلز" data-en="Why Palm Hills">لماذا بالم هيلز</a>
+      <a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-ar="تواصل معنا" data-en="Contact">تواصل معنا</h4>
+      <a href="tel:01068439196">📞 01068439196</a>
+      <a href="https://wa.me/201068439196" target="_blank">💬 WhatsApp</a>
+      <a href="#" data-ar="📍 راس الحكمة، مصر" data-en="📍 Ras El Hekma, Egypt">📍 راس الحكمة، مصر</a>
+      <a href="https://www.palmhillsdevelopments.com" target="_blank">🌐 palmhillsdevelopments.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Palm Hills Developments. <span data-ar="جميع الحقوق محفوظة" data-en="All rights reserved">جميع الحقوق محفوظة</span>.</span>
+    <span data-ar="هاسيندا راس الحكمة — الساحل المتوسطي الاستثنائي" data-en="Hacienda Ras El Hekma — The Extraordinary Mediterranean Coast">هاسيندا راس الحكمة — الساحل المتوسطي الاستثنائي</span>
+  </div>
+</footer>
+
+<!-- FLOAT BUTTONS -->
+<div class="float-btns">
+  <a href="https://wa.me/201068439196?text=أريد الاستفسار عن هاسيندا راس الحكمة" target="_blank" class="float-btn float-wa">
+    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span data-ar="واتساب" data-en="WhatsApp">واتساب</span>
+  </a>
+  <a href="tel:01068439196" class="float-btn float-call">
+    📞 <span>01068439196</span>
+  </a>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2 data-ar="احجز وحدتك الآن" data-en="Book Your Unit Now">احجز وحدتك الآن</h2>
+    <p class="sub" data-ar="سجّل بياناتك وسيتواصل معك فريقنا فوراً" data-en="Register and our team will contact you immediately">سجّل بياناتك وسيتواصل معك فريقنا فوراً</p>
+    <div class="form-group">
+      <label data-ar="الاسم كامل" data-en="Full Name">الاسم كامل</label>
+      <input type="text" id="mName" placeholder="محمد أحمد">
+    </div>
+    <div class="form-group">
+      <label data-ar="رقم الموبايل" data-en="Mobile Number">رقم الموبايل</label>
+      <input type="tel" id="mPhone" placeholder="01xxxxxxxxx">
+    </div>
+    <div class="form-group">
+      <label data-ar="اختر المشروع" data-en="Select Project">اختر المشروع</label>
+      <select id="mProject">
+        <option>Hacienda Ras El Hekma</option>
+        <option>Hacienda Blue</option>
+        <option>Hacienda Waters</option>
+        <option>Palm Hills Alexandria</option>
+      </select>
+    </div>
+    <button class="form-submit" onclick="submitModal()" data-ar="احجز الآن ←" data-en="Book Now →">احجز الآن ←</button>
+  </div>
+</div>
+
+<script>
+// Language
+let currentLang = 'ar';
+
+function toggleLang() {
+  currentLang = currentLang === 'ar' ? 'en' : 'ar';
+  const body = document.body;
+
+  if (currentLang === 'en') {
+    body.setAttribute('lang', 'en');
+    body.setAttribute('dir', 'ltr');
+    body.classList.add('en');
+    document.getElementById('langBtn').textContent = 'عر';
+    document.title = 'Hacienda Ras El Hekma | Palm Hills Developments';
+  } else {
+    body.setAttribute('lang', 'ar');
+    body.setAttribute('dir', 'rtl');
+    body.classList.remove('en');
+    document.getElementById('langBtn').textContent = 'EN';
+    document.title = 'هاسيندا راس الحكمة | Palm Hills Developments';
+  }
+
+  // Update all data-ar / data-en elements
+  document.querySelectorAll('[data-ar]').forEach(el => {
+    const key = currentLang === 'ar' ? 'ar' : 'en';
+    if (el.dataset[key]) {
+      if (el.tagName === 'INPUT' || el.tagName === 'SELECT') {
+        el.placeholder = el.dataset[key];
+      } else {
+        el.textContent = el.dataset[key];
+      }
+    }
+  });
+
+  // Update logo for RTL/LTR
+  const navLogo = document.getElementById('navLogo');
+  if (currentLang === 'en') {
+    navLogo.src = 'https://palmhills.me/wp-content/uploads/2026/05/logo_dark1.png';
+  } else {
+    navLogo.src = 'https://palmhills.me/wp-content/uploads/2026/05/logoAr-1024x263.png';
+  }
+}
+
+// Scroll nav
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('mainNav');
+  if (window.scrollY > 50) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+// Fade in on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Form submit
+function submitForm() {
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  if (!name || !phone) {
+    alert(currentLang === 'ar' ? 'من فضلك أدخل الاسم ورقم الموبايل' : 'Please enter your name and phone number');
+    return;
+  }
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+
+  // WhatsApp fallback
+  setTimeout(() => {
+    const msg = `مرحباً، أريد الاستفسار عن هاسيندا راس الحكمة\nالاسم: ${name}\nالموبايل: ${phone}`;
+    window.open(`https://wa.me/201068439196?text=${encodeURIComponent(msg)}`, '_blank');
+  }, 1500);
+}
+
+// Modal
+function closeModal() { document.getElementById('modal').classList.remove('open'); }
+function openModal() { document.getElementById('modal').classList.add('open'); }
+function submitModal() {
+  const name = document.getElementById('mName').value;
+  const phone = document.getElementById('mPhone').value;
+  if (!name || !phone) return;
+  const msg = `مرحباً، أريد الاستفسار عن هاسيندا راس الحكمة\nالاسم: ${name}\nالموبايل: ${phone}`;
+  window.open(`https://wa.me/201068439196?text=${encodeURIComponent(msg)}`, '_blank');
+  closeModal();
+}
+document.getElementById('modal').addEventListener('click', e => {
+  if (e.target === document.getElementById('modal')) closeModal();
+});
+
+// Video
+function playVideo() {
+  document.getElementById('videoThumb').style.opacity = '0';
+  setTimeout(() => {
+    document.getElementById('videoThumb').style.display = 'none';
+    const frame = document.getElementById('videoFrame');
+    frame.src = 'https://www.youtube.com/embed/search?q=hacienda+ras+el+hekma+palm+hills&autoplay=1';
+    frame.style.display = 'block';
+  }, 400);
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>
